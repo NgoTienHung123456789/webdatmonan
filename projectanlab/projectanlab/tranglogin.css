@@ -1,0 +1,53 @@
+/* Login form */
+form {
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Thanh đăng nhập và mật khẩu */
+  input[type=text], input[type=password] {
+    width: 100%;
+    text-align: center;
+    padding: 15px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Chỉnh các button */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Thêm hover cho button */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Thêm sign in */
+  h1 {
+      text-align: center;
+  }
+  /* Thêm padding cho containers */
+  .container {
+    padding: 16px;
+  }
+  
+  /* Phần quên mật khẩu */
+  span.psw1 {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+  }

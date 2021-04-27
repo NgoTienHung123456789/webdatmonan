@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang quản trị viên</title>
+    <link rel="stylesheet" href="trangquantri.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Phần bảng liệt kê đồ ăn -->
+    <h2>Danh sách các món ăn nhà hàng</h2>
+    <div class="mb-3">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addPost">
+          Thêm món ăn</button>
+    </div>
+            <!-- Phần modal -->
+    <div class="modal fade" id="addPost">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <form id="frmNewPost" onsubmit="addPost(event);">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                      <h4 class="modal-title">THÊM MÓN ĂN</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                      <div class="form-group">
+                          <label for="postSTT">Số thứ tự</label>
+                          <input type="number" class="form-control" placeholder="Nhập số thứ tự" id="postSTT">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="postName">Thêm tên món ăn</label>
+                          <input type="text" class="form-control" placeholder="Nhập tên món ăn" id="postName">
+
+                      </div>
+
+                      <div class="form-group">
+                          <label for="postDiscribe">Miêu tả</label>
+                          <textarea type="text" class="form-control" placeholder="Miêu tả món ăn" id="postDiscribe"
+                              rows="3">
+                              </textarea>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="postImage">Thêm ảnh</label>
+                          <input type="text" class="form-control" placeholder="Thêm ảnh" id="postImage">                    
+                      </div>
+
+                       <div class="form-group">
+                          <label for="postNumber">Số lượng</label>
+                          <input type="number" class="form-control" placeholder="Nhập số thứ tự" id="posNumber">
+                      </div>
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-success">Save</button>
+                      <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </form>
+
+
+          </div>
+      </div>
+  </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <td><b>Số thứ tự</b></td>
+            <td><b>Tên món ăn</b></td>
+            <td><b>Miêu tả</b></td>
+            <td><b>Giá cả</b></td>
+            <td><b>Ảnh</b></td>
+            <td><b>Số lượng còn lại</b></td>
+            <td><b>Số lượng đã đặt</b></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Beef Wellington</td>
+            <td>Beef + bread</td>
+            <td>10.00$</td>
+            <td><img src="https://static01.nyt.com/images/2019/12/13/dining/mc-beef-wellington/mc-beef-wellington-articleLarge.jpg" alt="Beef Wellington" style="width:100px; height:100px"></td>
+            <td>5</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Trifle</td>
+            <td>deseart</td>
+            <td>9.00$</td>
+            <td><img src="https://www.recipetineats.com/wp-content/uploads/2017/12/Christmas-Trifle-3-SQ.jpg " alt="Trifle" style="width:100px; height:100px"></td>
+            <td>8</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Pan-Fry A Scallop</td>
+            <td>dry scallop</td>
+            <td>8.00$</td>
+            <td><img src="https://cdn.mos.cms.futurecdn.net/muJAmmFBNwYHmfSYdSphjG.jpg" alt="Pan-Fry A Scallop" style="width:100px; height:100px"></td>
+            <td>10</td>
+            <td>18</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Phần liệt kê các khách hàng đặt món ăn -->
+      <h2>Danh sách món ăn đã được đặt</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <td><b>Mã khách hàng</b></td>
+            <td><b>Tên khách hàng</b></td>
+            <td><b>Món ăn đã đặt</b></td>
+            <td><b>Số lượng</b></td>
+            <td><b>Địa chỉ</b></td>
+            <td><b>Tổng tiền</b></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Thang</td>
+            <td>Beef Wellington</td>
+            <td>2</td>
+            <td>Số 1, quận Thanh Xuân, Hà Nội</td>
+            <td>20.00$</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Ha</td>
+            <td>Traffle</td>
+            <td>1</td>
+            <td>Số 5, quận Cầu Giấy, Hà Nội</td>
+            <td>9.00$</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Anh</td>
+            <td>Pan-Fry A Scallop</td>
+            <td>4</td>
+            <td>Số 8, quận Đống Đa, Hà Nội</td>
+            <td >32.00$</td>
+          </tr>
+        </tbody>
+        
+      </table>
+      <script src="trangquantri.js"></script>
+</body>
+</html>

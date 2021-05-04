@@ -1,0 +1,19 @@
+h2, h4 {
+    caption-side: top;
+    text-align: center;
+}
+table{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+th{
+    border:1px solid black;
+}
+td{
+    border:1px solid black;
+    text-align: center;
+}
+tr:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
